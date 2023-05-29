@@ -97,9 +97,7 @@ export class UsersService {
       throw new NotFoundException('Usuário não existe');
     }
 
-    this.usersModel.findByIdAndDelete(id);
-
-    return
+    return this.usersModel.findByIdAndDelete(id);
   }
 
   private async findOneByUsername(user: string): Promise<User> {

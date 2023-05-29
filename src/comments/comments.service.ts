@@ -37,8 +37,6 @@ export class CommentsService {
       throw new NotFoundException('Comment not found');
     }
 
-    this.commentsModel.findByIdAndDelete(id);
-  
-    return
+    return this.commentsModel.findByIdAndDelete(id);
   }
 }

@@ -50,8 +50,6 @@ export class PostsService {
       throw new NotFoundException('Post não existe');
     }
 
-    this.postsModel.findByIdAndDelete(id);
-    
-    return
+    return this.postsModel.findByIdAndDelete(id);
   }
 }
